@@ -29,13 +29,14 @@ export default function Sugestoes() {
     },
   ];
   return (
-    <div class="sugestoes">
-      <div class="titulo">
+    <div className="sugestoes">
+      <div className="titulo">
         Sugestões para você
         <div>Ver tudo</div>
       </div>
       {sugestoes.map((s) => (
         <SugestaoCard
+          key={s.nomeUsuario}
           imagemUsuario={s.imagemUsuario}
           nomeUsuario={s.nomeUsuario}
           motivoSugestao={s.motivoSugestao}

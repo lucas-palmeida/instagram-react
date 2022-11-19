@@ -17,23 +17,23 @@ export default function PostCard(props) {
   }
 
   return (
-    <div class="post" data-test="post">
-      <div class="topo">
-        <div class="usuario">
+    <div className="post" data-test="post">
+      <div className="topo">
+        <div className="usuario">
           <img src={props.imagemUsuario} alt={props.nomeUsuario} />
           {props.nomeUsuario}
         </div>
-        <div class="acoes">
+        <div className="acoes">
           <ion-icon name="ellipsis-horizontal"></ion-icon>
         </div>
       </div>
 
-      <div class="conteudo" >
+      <div className="conteudo" >
         <img src={props.imagemPost} alt={props.nomeUsuario} onDoubleClick={() => (gostar==="heart-outline") ? setGostar("heart") & setCurtidas(curtidas+0.001) : null} data-test="post-image"/>
       </div>
 
-      <div class="fundo">
-        <div class="acoes">
+      <div className="fundo">
+        <div className="acoes">
           <div>
             <ion-icon name={gostar} onClick={verificaLike} data-test="like-post"></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
@@ -44,9 +44,9 @@ export default function PostCard(props) {
           </div>
         </div>
 
-        <div class="curtidas">
+        <div className="curtidas">
           <img src={props.imagemCurtidas} alt={props.perfilCurtiu} />
-          <div class="texto">
+          <div className="texto">
             Curtido por <strong>{props.perfilCurtiu}</strong> e{" "}
             <strong data-test="likes-number">outras {curtidas.toFixed(3)} pessoas</strong>
           </div>

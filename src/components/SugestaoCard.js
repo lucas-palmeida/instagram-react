@@ -1,15 +1,15 @@
 export default function SugestaoCard(props) {
   return (
-    <div class="sugestao">
-      <div class="usuario">
+    <div className="sugestao">
+      <div className="usuario">
         <img src={props.imagemUsuario} alt={props.nomeUsuario} />
-        <div class="texto">
-          <div class="nome">{props.nomeUsuario}</div>
-          <div class="razao">{props.motivoSugestao}</div>
+        <div className="texto">
+          <div className="nome">{props.nomeUsuario}</div>
+          <div className="razao">{props.motivoSugestao}</div>
         </div>
       </div>
 
-      <div class="seguir">Seguir</div>
+      <div className="seguir">Seguir</div>
     </div>
   );
 }

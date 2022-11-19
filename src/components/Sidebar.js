@@ -5,10 +5,10 @@ export default function Sidebar() {
   const [nome, setNome] = React.useState("Catana");
   const [imagem, setImagem] = React.useState("assets/img/catanacomics.svg")
   return (
-    <div class="sidebar">
-      <div class="usuario" data-test="user">
+    <div className="sidebar">
+      <div className="usuario" data-test="user">
         <img src={imagem} alt={nome} onClick={() => setImagem(prompt("Digite o link da imagem:"))} data-test="profile-image"/>
-        <div class="texto">
+        <div className="texto">
           <strong>catanacomics</strong>
           <span data-test="name">
             {nome}
@@ -19,12 +19,12 @@ export default function Sidebar() {
 
       <Sugestoes />
 
-      <div class="links">
+      <div className="links">
         Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos •
         Localizações • Contas mais relevantes • Hashtags • Idioma
       </div>
 
-      <div class="copyright">© 2021 INSTAGRAM DO FACEBOOK</div>
+      <div className="copyright">© 2021 INSTAGRAM DO FACEBOOK</div>
     </div>
   );
 }

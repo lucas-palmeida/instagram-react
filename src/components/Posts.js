@@ -20,15 +20,16 @@ export default function Posts() {
     },
   ];
   return (
-    <div class="posts">
-      {posts.map((post) => (
+    <div className="posts">
+      {posts.map((p) => (
         <PostCard
-          imagemUsuario={post.imagemUsuario}
-          nomeUsuario={post.nomeUsuario}
-          imagemPost={post.imagemPost}
-          imagemCurtidas={post.imagemCurtidas}
-          perfilCurtiu={post.perfilCurtiu}
-          numCurtidas={post.numCurtidas}
+          key={p.nomeUsuario}
+          imagemUsuario={p.imagemUsuario}
+          nomeUsuario={p.nomeUsuario}
+          imagemPost={p.imagemPost}
+          imagemCurtidas={p.imagemCurtidas}
+          perfilCurtiu={p.perfilCurtiu}
+          numCurtidas={p.numCurtidas}
         />
       ))}
     </div>

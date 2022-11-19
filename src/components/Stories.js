@@ -12,11 +12,11 @@ export default function Stories() {
     { imagem: "assets/img/memeriagourmet.svg", nome: "memeriagourmet" },
   ];
   return (
-    <div class="stories">
-      {stories.map((story) => (
-        <StoryCard imagem={story.imagem} nome={story.nome} />
+    <div className="stories">
+      {stories.map((s) => (
+        <StoryCard key={s.nome} imagem={s.imagem} nome={s.nome} />
       ))}
-      <div class="setinha">
+      <div className="setinha">
         <ion-icon name="chevron-forward-circle"></ion-icon>
       </div>
     </div>
